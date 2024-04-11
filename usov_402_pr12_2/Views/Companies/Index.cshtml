@@ -1,0 +1,23 @@
+﻿@model IEnumerable<usov_402_pr12_2.Models.Company>
+
+<h2>Список Компаній</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Назва</th>
+            <th>Адреса</th>
+            <th>Телефон</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+            </tr>
+        }
+    </tbody>
+</table>
